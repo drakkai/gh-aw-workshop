@@ -41,6 +41,18 @@
               <span aria-hidden="true">&#8594;</span>
             </button>
           </li>
+          <li>
+            <button
+              class="daily-update-trigger"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="august-22-dialog"
+              data-dialog-trigger
+            >
+              <span>22nd of August</span>
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -176,6 +188,33 @@
           Actions for tasks where exact reproducibility doesn&rsquo;t matter, such as triaging
           issues, drafting documentation, researching dependencies, or proposing code
           improvements for human review.
+        </p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="daily-update-dialog"
+      id="august-22-dialog"
+      aria-labelledby="august-22-question"
+      aria-describedby="august-22-answer"
+    >
+      <article class="daily-update-dialog-content">
+        <header class="daily-update-dialog-header">
+          <p>Daily Update / 22nd of August</p>
+          <form method="dialog">
+            <button class="dialog-close" type="submit" aria-label="Close dialog" title="Close dialog">
+              <span aria-hidden="true">&#10005;</span>
+            </button>
+          </form>
+        </header>
+        <h2 id="august-22-question">Which AI engine should I use?</h2>
+        <p id="august-22-answer">
+          GitHub Copilot is the default engine, supporting the <strong>copilot-requests: write</strong>
+          permission or a <strong>COPILOT_GITHUB_TOKEN</strong>. Claude Code offers fine-grained turn
+          control via <strong>max-turns</strong> and authenticates with <strong>ANTHROPIC_API_KEY</strong>
+          or Anthropic WIF. Codex uses <strong>CODEX_API_KEY</strong> or <strong>OPENAI_API_KEY</strong>,
+          while Gemini uses <strong>GEMINI_API_KEY</strong> or Google WIF. Compare the available AI
+          engines before choosing one for your workflow.
         </p>
       </article>
     </dialog>
