@@ -41,6 +41,18 @@
               <span aria-hidden="true">&#8594;</span>
             </button>
           </li>
+          <li>
+            <button
+              class="daily-update-trigger"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="august-30-dialog"
+              data-dialog-trigger
+            >
+              <span>30th of August</span>
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -176,6 +188,31 @@
           Actions for tasks where exact reproducibility doesn&rsquo;t matter, such as triaging
           issues, drafting documentation, researching dependencies, or proposing code
           improvements for human review.
+        </p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="daily-update-dialog"
+      id="august-30-dialog"
+      aria-labelledby="august-30-question"
+      aria-describedby="august-30-answer"
+    >
+      <article class="daily-update-dialog-content">
+        <header class="daily-update-dialog-header">
+          <p>Daily Update / 30th of August</p>
+          <form method="dialog">
+            <button class="dialog-close" type="submit" aria-label="Close dialog" title="Close dialog">
+              <span aria-hidden="true">&#10005;</span>
+            </button>
+          </form>
+        </header>
+        <h2 id="august-30-question">Can workflows trigger other workflows?</h2>
+        <p id="august-30-answer">
+          Yes, using the <strong>dispatch-workflow</strong> safe output, which lets a completed
+          agentic workflow kick off another workflow (for example via
+          <code>safe-outputs: dispatch-workflow: max: 1</code>) instead of requiring an external
+          trigger.
         </p>
       </article>
     </dialog>
