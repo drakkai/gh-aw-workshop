@@ -41,6 +41,18 @@
               <span aria-hidden="true">&#8594;</span>
             </button>
           </li>
+          <li>
+            <button
+              class="daily-update-trigger"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="august-31-dialog"
+              data-dialog-trigger
+            >
+              <span>31st of August</span>
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -176,6 +188,32 @@
           Actions for tasks where exact reproducibility doesn&rsquo;t matter, such as triaging
           issues, drafting documentation, researching dependencies, or proposing code
           improvements for human review.
+        </p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="daily-update-dialog"
+      id="august-31-dialog"
+      aria-labelledby="august-31-question"
+      aria-describedby="august-31-answer"
+    >
+      <article class="daily-update-dialog-content">
+        <header class="daily-update-dialog-header">
+          <p>Daily Update / 31st of August</p>
+          <form method="dialog">
+            <button class="dialog-close" type="submit" aria-label="Close dialog" title="Close dialog">
+              <span aria-hidden="true">&#10005;</span>
+            </button>
+          </form>
+        </header>
+        <h2 id="august-31-question">Is gh-aw a replacement for GitHub Actions, or does it run on top of it?</h2>
+        <p id="august-31-answer">
+          gh-aw runs through GitHub Actions rather than replacing it: it compiles a
+          Markdown workflow into a <code>.lock.yml</code> GitHub Actions workflow. Every run
+          is a standard Actions run with native triggers, runner options, job logs, and
+          spending limits &mdash; the generated agent job simply adds the selected AI engine
+          plus configurable controls such as sandboxing, threat detection, and safe outputs.
         </p>
       </article>
     </dialog>
